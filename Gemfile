@@ -50,8 +50,6 @@ gem "sassc-rails"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-# make errors better looking
-gem 'better_errors'
 
 # Bulma CSS
 gem 'bulma-rails', '~> 0.9.3'
@@ -81,9 +79,16 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
+  
+  # to enable the REPL and local/instance variable inspection.
+  gem "binding_of_caller"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem "spring"
+
+  # make errors better looking
+  gem 'better_errors'
+
 end
 
 group :test do
