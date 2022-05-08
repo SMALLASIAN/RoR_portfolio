@@ -10,22 +10,15 @@
   </head>
 
   <body>
-  <section class="hero is-primary is-medium">
+  <section class="hero is-medium is-link">
 	  <!-- Hero head: will stick at the top -->
 	  <div class="hero-head">
 	    <nav class="navbar">
 	      <div class="container">
-	        <div class="navbar-brand">
-	          <%= link_to 'ホーム', root_path, class: "navbar-item" %>
-	          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-	            <span></span>
-	            <span></span>
-	            <span></span>
-	          </span>
-	        </div>
 	        <div id="navbarMenuHeroA" class="navbar-menu">
 	          <div class="navbar-end">
-	            <%= link_to "新規作成", new_post_path, class:"navbar-item" %>
+				<%= link_to 'ホーム', root_path, class: "navbar-item" %>
+				<%= link_to "新規作成", new_post_path, class:"navbar-item" %>
 	          </div>
 	        </div>
 	      </div>
