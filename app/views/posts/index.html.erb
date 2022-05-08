@@ -1,4 +1,4 @@
-<% content_for :page_title, "Index" %>
+<% content_for :page_title, "Shakyのブログへようこそ" %>
 
 
 <section class="section">
@@ -15,7 +15,7 @@
                     <%= post.content %>
                 </div>
                 <div class="comment-count">
-                    <span class="tag is-rounded"><%# comment count %></span>
+                    <span class="tag is-rounded"><%= post.comments.count %></span>
                 </div>
             </div>
         <% end %>
