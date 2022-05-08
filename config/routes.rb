@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/projects'
-  get 'home/item'
-  get 'posts/index'
+  root "home#top"
+  get 'home/projects' => 'home#projects'
+  get 'home/item' => 'home#item'
+
+  get 'posts/index' => 'posts#index'
   resources :posts do
     resources :comments
   end
@@ -11,6 +13,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   #root "posts#index"
-  root "home#top"
+  
   
 end

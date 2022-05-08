@@ -36,9 +36,10 @@
 
     <div class="work">
         <!-- Work item 01 -->
-        <a href="portfolio-item.html" class="work__item">
-            <img src="./img/portfolio--01.jpg" alt="portfolio-01" class="work__img">
-        </a>
+        
+        <%= link_to home_item_path do %>
+            <%= image_tag "projects1.webp", class: "work__item work__img" %>
+         <% end %>
 
     </div>
 </section>
