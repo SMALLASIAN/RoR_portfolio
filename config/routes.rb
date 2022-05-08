@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/projects'
+  get 'home/item'
+  get 'posts/index'
   resources :posts do
     resources :comments
   end
@@ -7,6 +10,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  root "posts#index"
+  #root "posts#index"
+  root "home#top"
   
 end
