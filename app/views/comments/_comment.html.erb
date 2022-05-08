@@ -9,6 +9,6 @@
             </div>
         </div>
 
-        <%= link_to 'Delete', [comment.post, comment], method: :delete, class: "button is-danger", data: { confirm: "Are you sure?" } %>
+        <%= button_to 'Delete', [comment.post, comment], method: :delete, class: "button is-danger", data: { confirm: "Are you sure?" } %>
     </article>
 </div>
