@@ -6,7 +6,7 @@
 		  <!-- Left side -->
 		  <div class="level-left">
 		    <p class="level-item">
-		        <strong>Actions</strong>
+		        <strong>編集/削除</strong>
 		    </p>
 		  </div>
 		  <!-- Right side -->
@@ -15,8 +15,8 @@
 		    	<%= link_to "編集", edit_post_path(@post), class:"button" %>
 		  	</p>
 		  	<p class="level-item">
-				<%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class:"button is-danger" %>
-				</p>
+				<%= button_to "削除", post_path(@post), method: :delete, data: { confirm: "削除してもよろしいですか？" }, class:"button is-danger" %>
+			</p>
 		  </div>
 		</nav>
 		<hr/>
