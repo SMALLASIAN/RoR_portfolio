@@ -433,9 +433,8 @@
  }
  
  .blog {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-gap: 30px;
+     display: center;
+     grid-gap: auto;
      max-width: 800px;
      margin: 0 auto;
  }

@@ -12,9 +12,7 @@
  *
  *= require_tree .
  *= require_self
- */
-
- *,
+ */*,
  *::before,
  *::after {
      box-sizing: border-box;
@@ -537,3 +535,5 @@
      margin-left: auto;
      margin-right: auto;
  }
+
+ 

@@ -50,6 +50,9 @@ gem "sassc-rails"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# JRuby-OpenSSL is an add-on gem for JRuby that emulates the Ruby OpenSSL native library.
+#gem 'jruby-openssl', '~> 0.9.4'
+
 
 # Bulma CSS
 gem 'bulma-rails', '~> 0.9.3'
