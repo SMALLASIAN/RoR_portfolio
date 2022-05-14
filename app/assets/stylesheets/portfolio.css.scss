@@ -59,7 +59,10 @@
      max-width: 100%;
  }
  
- strong { font-weight: var(--fw-bold)};
+ strong { 
+     font-weight: var(--fw-bold);
+     color: var(--clr-dark);
+}
  
  :focus {
      outline: 3px solid var(--clr-accent);
