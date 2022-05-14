@@ -51,7 +51,10 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
 # JRuby-OpenSSL is an add-on gem for JRuby that emulates the Ruby OpenSSL native library.
-gem 'jruby-openssl', '~> 0.9.4'
+# gem 'jruby-openssl', '~> 0.9.4'
+
+# Tool for loading and writing Java properties files
+gem 'java-properties', '~> 0.3.0'
 
 
 # Bulma CSS

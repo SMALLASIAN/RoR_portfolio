@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Blog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+	  <meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>ChikaraMiki Portfolio Website</title>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	  <script src="https://kit.fontawesome.com/0feef36ca7.js" crossorigin="anonymous"></script>
+	  <!-- Google fonts -->
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+	  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
-  <body>
-  <section class="hero is-medium is-link">
-	  <!-- Hero head: will stick at the top -->
-	  <div class="hero-head">
-	    <nav class="navbar">
-	      <div class="container">
-	        <div id="navbarMenuHeroA" class="navbar-menu">
-	          <div class="navbar-end">
-				<%= link_to 'Post', posts_path, class: "navbar-item" %>
-				<%= link_to "New Post", new_post_path, class:"navbar-item" %>
-				<%= link_to "Portfolio", root_path, class:"navbar-item" %>
-	          </div>
-	        </div>
-	      </div>
-	    </nav>
-	  </div>
-
-	  <!-- Hero content: will be in the middle -->
-	  <div class="hero-body">
-	    <div class="container has-text-centered">
-	      <h1 class="title">
-	        <%= yield :page_title %>
-	      </h1>
-	    </div>
-	  </div>
-	</section>
-  <%= yield %>
-  </body>
+	  <body>
+		  <header>
+			  <button class="nav-toggle" aria-label="toggle navigation">
+				  <span class="hamburger"></span>
+			  </button>
+			  <nav class="nav">
+				  <ul class="nav__list">
+					  <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+					  <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+					  <li class="nav__item"><a href="#projects" class="nav__link">My Projects</a></li>
+					  <li class="nav__item"><a href="./projects.html" class="nav__link">My Work</a></li>
+					  <li class="nav__item"><a href="localhost:3000" class="nav__link">My Blog</a></li>
+				  </ul>
+			  </nav>
+		  </header>
+		<%= yield %>
+	  </body>
 </html>

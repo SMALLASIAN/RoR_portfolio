@@ -1,9 +1,11 @@
+<%= stylesheet_link_tag "blog", "data-turbo-track": "reload" %>
+
 <div class="box">
     <article class="media">
         <div class="media-content">
             <div class="content">
                 <p>
-                    <strong><%= comment.name %>:</strong>
+                    <%= comment.name %>:
                     <%= comment.comment %>
                 </p>
             </div>

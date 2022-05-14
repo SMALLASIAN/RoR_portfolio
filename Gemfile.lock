@@ -77,7 +77,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
-    bouncy-castle-java (1.5.0147)
     builder (3.2.4)
     bulma-rails (0.9.3)
       sassc (~> 2.0)
@@ -132,11 +131,10 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    java-properties (0.3.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jruby-openssl (0.9.4)
-      bouncy-castle-java (>= 1.5.0147)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -289,8 +287,8 @@ DEPENDENCIES
   guard (~> 2.18)
   guard-livereload (~> 2.5, >= 2.5.2)
   importmap-rails
+  java-properties (~> 0.3.0)
   jbuilder
-  jruby-openssl (~> 0.9.4)
   pg
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.4)

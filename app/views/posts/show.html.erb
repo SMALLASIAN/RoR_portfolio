@@ -1,12 +1,52 @@
 <% content_for :page_title, @post.title %>
 
-<section class="section">
+<%= stylesheet_link_tag "blog", "data-turbo-track": "reload" %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+  <body>
+  <section class="hero is-medium is-link">
+	  <!-- Hero head: will stick at the top -->
+	  <div class="hero-head">
+	    <nav class="navbar">
+	      <div class="container">
+	        <div id="navbarMenuHeroA" class="navbar-menu">
+	          <div class="navbar-end">
+				<%= link_to 'Post', posts_path, class: "navbar-item" %>
+				<%= link_to "New Post", new_post_path, class:"navbar-item" %>
+				<%= link_to "Portfolio", root_path, class:"navbar-item" %>
+	          </div>
+	        </div>
+	      </div>
+	    </nav>
+	  </div>
+
+	  <!-- Hero content: will be in the middle -->
+	  <div class="hero-body">
+	    <div class="container has-text-centered">
+	      <h1 class="title">
+	        <%= yield :page_title %>
+	      </h1>
+	    </div>
+	  </div>
+	</section>
+    
+    <!-- Blog Index content: will be the in the middle -->
+    <section class="section">
 	<div class="container">
 		<nav class="level">
 		  <!-- Left side -->
 		  <div class="level-left">
 		    <p class="level-item">
-		        <strong>Actions</strong>
+		        Actions
 		    </p>
 		  </div>
 		  <!-- Right side -->
@@ -25,16 +65,20 @@
 			<%= @post.content %>
 		</div>
 	</div>
-</section>
+	</section>
 
-<section class="section comments">
-	<div class="container">
-		<h2 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments</h2>
-		<%= render @post.comments %>
-		<div class="comment-form">
-			<hr />
-			<h6 class="subtitle is-6">Add Comment</h6>
-			<%= render 'comments/form' %>
+	<section class="section comments">
+		<div class="container">
+			<h2 class="subtitle is-5"><%= @post.comments.count %> Comments</h2>
+			<%= render @post.comments %>
+			<div class="comment-form">
+				<hr />
+				<h6 class="subtitle is-6">Add Comment</h6>
+				<%= render 'comments/form' %>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+  <%= yield %>
+  </body>
+</html>
+

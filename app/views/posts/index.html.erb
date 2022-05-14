@@ -1,7 +1,44 @@
 <% content_for :page_title, "Welcome to Shaky's Blog" %>
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<section class="section">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+  <body>
+  <section class="hero is-medium is-link">
+	  <!-- Hero head: will stick at the top -->
+	  <div class="hero-head">
+	    <nav class="navbar">
+	      <div class="container">
+	        <div id="navbarMenuHeroA" class="navbar-menu">
+	          <div class="navbar-end">
+				<%= link_to 'Post', posts_path, class: "navbar-item" %>
+				<%= link_to "New Post", new_post_path, class:"navbar-item" %>
+				<%= link_to "Portfolio", root_path, class:"navbar-item" %>
+	          </div>
+	        </div>
+	      </div>
+	    </nav>
+	  </div>
+
+	  <!-- Hero content: will be in the middle -->
+	  <div class="hero-body">
+	    <div class="container has-text-centered">
+	      <h1 class="title">
+	        <%= yield :page_title %>
+	      </h1>
+	    </div>
+	  </div>
+	</section>
+    
+    <!-- Blog Index content: will be the in the middle -->
+    <section class="section">
     <div class="container">
         <% @posts.each do |post| %><br>
             <div class="card">
@@ -21,4 +58,9 @@
             </div>
         <% end %>
     </div>
-</section>
+    </section>
+  <%= yield %>
+  </body>
+</html>
+
+

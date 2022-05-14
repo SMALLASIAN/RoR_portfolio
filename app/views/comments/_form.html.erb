@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "blog", "data-turbo-track": "reload" %>
+
 <%= simple_form_for([@post, @post.comments.build]) do |f| %>
     <div class="field">
         <div class="control">
