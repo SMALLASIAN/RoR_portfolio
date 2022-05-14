@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChikaraMiki Portfolio Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <script src="https://kit.fontawesome.com/0feef36ca7.js" crossorigin="anonymous"></script>
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-
-
-    <%= stylesheet_link_tag "portfolio.css", "data-turbo-track": "reload" %>
-    
-</head>
-<body>
-    <header>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">My Projects</a></li>
-                <li class="nav__item"><a href="./projects.html" class="nav__link">My Work</a></li>
-                <li class="nav__item"><a href="localhost:3000" class="nav__link">My Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Introduction -->
+<!-- Introduction -->
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
             Hi, I am <strong>Chikara Miki</strong>
@@ -86,27 +54,4 @@
 
         <%= link_to 'Click this', posts_path, class: "btn" %>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <a href="maileto:chikara.miki0905@icloud.com" clas="footer__link"><strong>chikara.miki0905@icloud.com</strong></a>
-        <ul class="social-list">
-
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://www.linkedin.com/in/chikaramiki0905">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </li>
-
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/SMALLASIAN">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </li>
-        </ul>
-    </footer>
-
-    <script src="./js/index.js"></script>
-
 </body>
-</html>
