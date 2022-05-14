@@ -21,7 +21,6 @@
 	          <div class="navbar-end">
 				<%= link_to 'Post', posts_path, class: "navbar-item" %>
 				<%= link_to "New Post", new_post_path, class:"navbar-item" %>
-				<%= link_to "Portfolio", root_path, class:"navbar-item" %>
 	          </div>
 	        </div>
 	      </div>
@@ -38,7 +37,7 @@
 	  </div>
 	</section>
     
-    <!-- Blog Index content: will be the in the middle -->
+    <!-- Blog Index content: will be the in the section -->
     <section class="section">
     <div class="container">
         <% @posts.each do |post| %><br>
@@ -53,7 +52,7 @@
                         <%= post.content %>
                     </div>
                     <div class="comment-count">
-                        <span class="tag is-rounded"><%# post.comments.count %> comments</span>
+                        <span class="tag is-rounded"><%= post.comments.count %> comments</span>
                     </div>
                 </div>
             </div>

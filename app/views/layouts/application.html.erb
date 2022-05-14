@@ -12,7 +12,6 @@
   
   
 	  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track': "reload" %>
   </head>
 	  <body>
 		  <header>
@@ -24,9 +23,10 @@
 					  <li class="nav__item"><%= link_to "Home", root_path, class: "nav__link" %></li>
 					  <li class="nav__item"><%= link_to "My Projects", home_projects_path, class: "nav__link" %></li>
 					  <li class="nav__item"><%= link_to "My Work", home_item_path, class: "nav__link" %></li>
-					  <li class="nav__item"><%= link_to "My blog", posts_path, class: "nav__link" %></li>
+					  <li class="nav__item"><%= link_to "My Blog", posts_path, class: "nav__link" %></li>
 				  </ul>
 			  </nav>
+			  <%= javascript_include_tag 'application', 'data-turbolinks-track': "reload" %>
 		  </header>
 		<%= yield %>
 	  </body>
