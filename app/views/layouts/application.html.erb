@@ -21,11 +21,10 @@
 			  </button>
 			  <nav class="nav">
 				  <ul class="nav__list">
-					  <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-					  <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-					  <li class="nav__item"><a href="#projects" class="nav__link">My Projects</a></li>
-					  <li class="nav__item"><a href="./projects.html" class="nav__link">My Work</a></li>
-					  <li class="nav__item"><a href="localhost:3000" class="nav__link">My Blog</a></li>
+					  <li class="nav__item"><%= link_to "Home", root_path, class: "nav__link" %></li>
+					  <li class="nav__item"><%= link_to "My Projects", home_projects_path, class: "nav__link" %></li>
+					  <li class="nav__item"><%= link_to "My Work", home_item_path, class: "nav__link" %></li>
+					  <li class="nav__item"><%= link_to "My blog", posts_path, class: "nav__link" %></li>
 				  </ul>
 			  </nav>
 		  </header>
